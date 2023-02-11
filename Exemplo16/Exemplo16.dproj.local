@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2012/03/29 21:24:46.843,=C:\Dev\AprendaDelphi\Exemplos\Exemplo16\Unit2.pas</Transaction>
+    <Transaction>2012/03/29 21:24:46.979,=C:\Dev\AprendaDelphi\Exemplos\Exemplo16\ServerController.pas</Transaction>
+    <Transaction>2012/03/29 21:24:47.003,=C:\Dev\AprendaDelphi\Exemplos\Exemplo16\UserSessionUnit.pas</Transaction>
+    <Transaction>2012/03/29 21:25:03.011,=C:\Dev\AprendaDelphi\Exemplos\Exemplo16\Unit1.pas</Transaction>
+    <Transaction>2012/03/29 21:25:32.970,=C:\Dev\AprendaDelphi\Exemplos\Exemplo16\Unit3.pas</Transaction>
+  </Transactions>
+</BorlandProject>

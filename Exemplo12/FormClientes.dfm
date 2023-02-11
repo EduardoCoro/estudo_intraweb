@@ -1,0 +1,87 @@
+object frmClientes: TfrmClientes
+  Left = 0
+  Top = 0
+  Width = 728
+  Height = 562
+  HorzScrollBar.Visible = False
+  VertScrollBar.Visible = False
+  RenderInvisibleControls = False
+  AllowPageAccess = True
+  ConnectionMode = cmAny
+  Background.Fixed = False
+  HandleTabs = False
+  LeftToRight = True
+  LockUntilLoaded = True
+  LockOnSubmit = True
+  ShowHint = True
+  XPTheme = True
+  DesignLeft = 8
+  DesignTop = 8
+  inline frmMenu1: TfrmMenu
+    Left = 0
+    Top = 0
+    Width = 202
+    Height = 562
+    Align = alLeft
+    TabOrder = 0
+    ExplicitWidth = 202
+    ExplicitHeight = 562
+    inherited IWFrameRegion: TIWRegion
+      Width = 202
+      Height = 562
+      ExplicitWidth = 202
+      ExplicitHeight = 562
+      inherited lnkVoltar: TIWLink
+        Height = 111
+        ExplicitHeight = 111
+      end
+    end
+  end
+  object IWRegion1: TIWRegion
+    Left = 202
+    Top = 0
+    Width = 526
+    Height = 562
+    Cursor = crAuto
+    RenderInvisibleControls = False
+    Align = alClient
+    BorderOptions.NumericWidth = 1
+    BorderOptions.BorderWidth = cbwNumeric
+    BorderOptions.Style = cbsSolid
+    BorderOptions.Color = clNone
+    Color = clNone
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 1000
+    Splitter = False
+    object IWRectangle1: TIWRectangle
+      Left = 1
+      Top = 1
+      Width = 524
+      Height = 48
+      Cursor = crAuto
+      Align = alTop
+      ParentShowHint = False
+      ShowHint = True
+      ZIndex = 0
+      RenderSize = True
+      StyleRenderOptions.RenderSize = True
+      StyleRenderOptions.RenderPosition = True
+      StyleRenderOptions.RenderFont = True
+      StyleRenderOptions.RenderZIndex = True
+      StyleRenderOptions.RenderVisibility = True
+      StyleRenderOptions.RenderStatus = True
+      StyleRenderOptions.RenderAbsolute = True
+      Text = ' Clientes'
+      Font.Color = clNone
+      Font.Size = 12
+      Font.Style = [fsBold]
+      BorderOptions.Color = clNone
+      BorderOptions.Width = 0
+      FriendlyName = 'IWRectangle1'
+      Color = clGradientActiveCaption
+      Alignment = taLeftJustify
+      VAlign = vaMiddle
+    end
+  end
+end

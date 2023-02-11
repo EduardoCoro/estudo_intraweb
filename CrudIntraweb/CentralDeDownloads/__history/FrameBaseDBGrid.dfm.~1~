@@ -1,0 +1,74 @@
+inherited frmBaseDBGrid: TfrmBaseDBGrid
+  Width = 782
+  Height = 556
+  ExplicitWidth = 782
+  ExplicitHeight = 556
+  inherited IWFrameRegion: TIWRegion
+    Width = 782
+    Height = 556
+    ExplicitWidth = 782
+    ExplicitHeight = 556
+    DesignSize = (
+      782
+      556)
+    object Grid: TIWDBGrid [0]
+      Left = 1
+      Top = 1
+      Width = 780
+      Height = 554
+      Align = alClient
+      BorderColors.Color = clNone
+      BorderColors.Light = clNone
+      BorderColors.Dark = clNone
+      BGColor = clNone
+      BorderSize = 1
+      BorderStyle = tfDefault
+      Caption = 'Grid'
+      CellPadding = 0
+      CellSpacing = 0
+      Font.Color = clNone
+      Font.Size = 10
+      Font.Style = []
+      FrameBuffer = 40
+      Lines = tlAll
+      UseFrame = True
+      UseSize = True
+      ScrollToCurrentRow = True
+      Columns = <>
+      DataSource = DataSource
+      FooterRowCount = 0
+      FriendlyName = 'Grid'
+      FromStart = True
+      HighlightColor = clNone
+      HighlightRows = False
+      Options = [dgShowTitles]
+      RefreshMode = rmAutomatic
+      RowLimit = 0
+      RollOver = True
+      RowClick = True
+      RollOverColor = clWebCRIMSON
+      RowHeaderColor = clNone
+      RowAlternateColor = clGradientActiveCaption
+      RowCurrentColor = clWebGREEN
+      TabOrder = -1
+      ExplicitLeft = 144
+      ExplicitTop = 96
+      ExplicitWidth = 300
+      ExplicitHeight = 150
+    end
+    inherited btnSalvar: TIWGradButton
+      Left = 478
+      Top = 503
+      Visible = False
+      ExplicitLeft = 478
+      ExplicitTop = 503
+    end
+    inherited btnCancelar: TIWGradButton
+      Left = 624
+      Top = 503
+      Visible = False
+      ExplicitLeft = 624
+      ExplicitTop = 503
+    end
+  end
+end

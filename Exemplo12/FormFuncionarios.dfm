@@ -1,0 +1,84 @@
+object frmFuncionarios: TfrmFuncionarios
+  Left = 0
+  Top = 0
+  Width = 787
+  Height = 549
+  VertScrollBar.Visible = False
+  RenderInvisibleControls = False
+  AllowPageAccess = True
+  ConnectionMode = cmAny
+  Background.Fixed = False
+  HandleTabs = False
+  LeftToRight = False
+  LockUntilLoaded = True
+  LockOnSubmit = True
+  ShowHint = True
+  XPTheme = True
+  DesignLeft = 8
+  DesignTop = 8
+  inline frmMenu1: TfrmMenu
+    Left = 0
+    Top = 0
+    Width = 165
+    Height = 549
+    Align = alLeft
+    TabOrder = 0
+    ExplicitHeight = 549
+    inherited IWFrameRegion: TIWRegion
+      Height = 549
+      ExplicitHeight = 549
+      inherited lnkVoltar: TIWLink
+        Height = 111
+        ExplicitHeight = 111
+      end
+    end
+  end
+  object IWRegion1: TIWRegion
+    Left = 165
+    Top = 0
+    Width = 622
+    Height = 549
+    Cursor = crAuto
+    RenderInvisibleControls = False
+    Align = alClient
+    BorderOptions.NumericWidth = 1
+    BorderOptions.BorderWidth = cbwNumeric
+    BorderOptions.Style = cbsSolid
+    BorderOptions.Color = clNone
+    Color = clNone
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 1000
+    Splitter = False
+    object IWRectangle1: TIWRectangle
+      Left = 1
+      Top = 1
+      Width = 620
+      Height = 48
+      Cursor = crAuto
+      Align = alTop
+      ParentShowHint = False
+      ShowHint = True
+      ZIndex = 0
+      RenderSize = True
+      StyleRenderOptions.RenderSize = True
+      StyleRenderOptions.RenderPosition = True
+      StyleRenderOptions.RenderFont = True
+      StyleRenderOptions.RenderZIndex = True
+      StyleRenderOptions.RenderVisibility = True
+      StyleRenderOptions.RenderStatus = True
+      StyleRenderOptions.RenderAbsolute = True
+      Text = ' Funcion'#225'rios'
+      Font.Color = clNone
+      Font.Size = 12
+      Font.Style = [fsBold]
+      BorderOptions.Color = clNone
+      BorderOptions.Width = 0
+      FriendlyName = 'IWRectangle1'
+      Color = clGradientActiveCaption
+      Alignment = taLeftJustify
+      VAlign = vaMiddle
+      ExplicitWidth = 524
+    end
+  end
+end

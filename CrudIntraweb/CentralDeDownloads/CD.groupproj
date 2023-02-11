@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{C2D0F1C5-8259-4408-8642-CFF367433B57}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CentralDeDownloads.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CentralDeDownloads">
+        <MSBuild Projects="CentralDeDownloads.dproj"/>
+    </Target>
+    <Target Name="CentralDeDownloads:Clean">
+        <MSBuild Projects="CentralDeDownloads.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CentralDeDownloads:Make">
+        <MSBuild Projects="CentralDeDownloads.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CentralDeDownloads"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CentralDeDownloads:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CentralDeDownloads:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

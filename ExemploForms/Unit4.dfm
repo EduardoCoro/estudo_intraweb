@@ -1,0 +1,55 @@
+object frameXE2: TframeXE2
+  Left = 0
+  Top = 0
+  Width = 343
+  Height = 169
+  TabOrder = 0
+  object IWFrameRegion: TIWRegion
+    Left = 0
+    Top = 0
+    Width = 343
+    Height = 169
+    Cursor = crAuto
+    RenderInvisibleControls = False
+    TabOrder = 0
+    Align = alClient
+    BorderOptions.NumericWidth = 1
+    BorderOptions.BorderWidth = cbwNumeric
+    BorderOptions.Style = cbsSolid
+    BorderOptions.Color = clNone
+    Color = clNone
+    ParentShowHint = False
+    ShowHint = True
+    ZIndex = 1000
+    Splitter = False
+    object IWLabel1: TIWLabel
+      Left = 32
+      Top = 32
+      Width = 140
+      Height = 25
+      Cursor = crAuto
+      ParentShowHint = False
+      ShowHint = True
+      ZIndex = 0
+      RenderSize = True
+      StyleRenderOptions.RenderSize = True
+      StyleRenderOptions.RenderPosition = True
+      StyleRenderOptions.RenderFont = True
+      StyleRenderOptions.RenderZIndex = True
+      StyleRenderOptions.RenderVisibility = True
+      StyleRenderOptions.RenderStatus = True
+      StyleRenderOptions.RenderAbsolute = True
+      Alignment = taLeftJustify
+      BGColor = clNone
+      Font.Color = clNone
+      Font.Size = 16
+      Font.Style = []
+      NoWrap = False
+      ConvertSpaces = False
+      HasTabOrder = False
+      FriendlyName = 'IWLabel1'
+      Caption = 'IWFrame XE2'
+      RawText = False
+    end
+  end
+end

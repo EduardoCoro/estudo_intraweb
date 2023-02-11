@@ -1,0 +1,118 @@
+--------------
+Admin Produtos
+--------------
+
+procedure TfrmAdminProdutos.btnAlterarProdutoClick(Sender: TObject);
+begin
+  MostraFrame(TfrmDadosProduto, UserSession.UmProduto, opEdicao);
+end;
+
+procedure TfrmAdminProdutos.btnListaProdutosClick(Sender: TObject);
+begin
+  MostraListaDeProdutos;
+end;
+
+procedure TfrmAdminProdutos.btnSairClick(Sender: TObject);
+begin
+  Release;
+end;
+
+procedure TfrmAdminProdutos.btnUploadReleaseClick(Sender: TObject);
+begin
+  MostraForm(TfrmUploadRelease);
+end;
+
+procedure TfrmAdminProdutos.IWAppFormCreate(Sender: TObject);
+begin
+  MostraListaDeProdutos;
+end;
+
+procedure TfrmAdminProdutos.btnNovoProdutoClick(Sender: TObject);
+begin
+  MostraFrame(TfrmDadosProduto, UserSession.UmProduto, opInsercao);
+end;
+
+procedure TfrmAdminProdutos.MostraListaDeProdutos;
+begin
+  MostraFrame(TfrmListaProdutos, UserSession.ListaProdutos, opVisualizacao);
+end;
+
+---------------------
+Dados Produto
+---------------------
+
+  private
+    { Private declarations }
+    fFileName: String;
+
+
+constructor TfrmDadosProduto.Create(Owner: TComponent; aDataset: TDataset; aOperacao: TOperacao);
+begin
+  // inherited vai abrir o dataset, entao precisamos prepara-lo antes, passando o parâmetro correto
+  if aOperacao = opInsercao then
+  begin
+    UserSession.UmProduto.Parameters.ParamByName('id_produto').Value := -1;
+  end
+  else
+  if aOperacao = opEdicao then
+  begin
+    UserSession.UmProduto.Parameters.ParamByName('id_produto').Value := UserSession.IdProduto;
+  end;
+
+  // sempre necessário
+  inherited;
+
+  // se está editando, mostro a imagem que está em um arquivo
+  if aOperacao = opEdicao then
+  begin
+    if FileExists(UserSession.PastaImagemProduto + DataSource.Dataset.FieldByName('imagem').AsString) then
+    begin
+      IWImageFile1.ImageFile.Filename := UserSession.PastaImagemProduto + DataSource.Dataset.FieldByName('imagem').AsString;
+    end;
+  end;
+end;
+
+procedure TfrmDadosProduto.IWFileUploader1AsyncUploadCompleted(Sender: TObject;
+  var DestPath, FileName: string; var SaveFile, Overwrite: Boolean);
+begin
+  DestPath := UserSession.PastaImagemProduto;
+  ForceDirectories(DestPath);
+  SaveFile := True;
+  Overwrite := True;
+  // salva o nome do arquivo numa variavel local temporária, será usada no evento OnAsyncUploadSuccess
+  fFileName := FileName;
+end;
+
+procedure TfrmDadosProduto.IWFileUploader1AsyncUploadSuccess(Sender: TObject;
+  EventParams: TStringList);
+begin
+  // nome do arquivo salvo anteriormente
+  IWDBEdit5.Text := fFileName;
+  DataSource.Dataset.FieldByName('imagem').AsString := fFileName;
+  IWImageFile1.ImageFile.Filename := UserSession.PastaImagemProduto + DataSource.Dataset.FieldByName('imagem').AsString;
+end;
+
+
+-----------------
+Lista Produtos
+-----------------
+
+constructor TfrmListaProdutos.Create(Owner: TComponent; aDataset: TDataset; aOperacao: TOperacao);
+begin
+  inherited;
+  UserSession.ListaProdutos.First;
+  UserSession.IdProduto := UserSession.ListaProdutos.FieldByName('id_produto').AsInteger;
+end;
+
+procedure TfrmListaProdutos.GridColumns0Click(ASender: TObject; const AValue: string);
+begin
+  UserSession.IdProduto := StrToInt(AValue);
+  UserSession.ListaProdutos.Locate('id_produto', AValue, []);
+end;
+
+
+-------------
+UserSession
+------------
+
+

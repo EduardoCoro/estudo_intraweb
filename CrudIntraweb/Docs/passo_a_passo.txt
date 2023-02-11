@@ -1,0 +1,10 @@
+area de admin 
+-------------
+
+1. botão produtos: abre area admin de produtos
+2. botão clientes: abre area admin de clientes
+3. botão licenças: abre listagem de licenças por produto
+4. botão Sair: fecha aplicativo
+
+admin de produtos
+-----------------

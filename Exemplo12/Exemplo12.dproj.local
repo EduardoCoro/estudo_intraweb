@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2012/03/16 20:36:08.000.450,=C:\Dev\AprendaDelphi\Exemplo12\Unit2.pas</Transaction>
+    <Transaction>2012/03/16 20:36:08.000.608,=C:\Dev\AprendaDelphi\Exemplo12\UserSessionUnit.pas</Transaction>
+    <Transaction>2012/03/16 20:36:08.000.584,=C:\Dev\AprendaDelphi\Exemplo12\ServerController.pas</Transaction>
+    <Transaction>2012/03/16 20:37:15.000.906,C:\Dev\AprendaDelphi\Exemplo12\Unit2.dfm=C:\Dev\AprendaDelphi\Exemplo12\Principal.dfm</Transaction>
+    <Transaction>2012/03/16 20:37:15.000.906,C:\Dev\AprendaDelphi\Exemplo12\Unit2.pas=C:\Dev\AprendaDelphi\Exemplo12\Principal.pas</Transaction>
+    <Transaction>2012/03/16 20:38:03.000.841,=C:\Dev\AprendaDelphi\Exemplo12\Unit1.pas</Transaction>
+    <Transaction>2012/03/16 20:40:56.000.191,=C:\Dev\AprendaDelphi\Exemplo12\Unit2.pas</Transaction>
+    <Transaction>2012/03/16 20:41:08.000.704,C:\Dev\AprendaDelphi\Exemplo12\Unit2.pas=C:\Dev\AprendaDelphi\Exemplo12\FormClientes.pas</Transaction>
+    <Transaction>2012/03/16 20:41:08.000.704,C:\Dev\AprendaDelphi\Exemplo12\Unit2.dfm=C:\Dev\AprendaDelphi\Exemplo12\FormClientes.dfm</Transaction>
+    <Transaction>2012/03/16 20:41:35.000.285,C:\Dev\AprendaDelphi\Exemplo12\Unit1.dfm=C:\Dev\AprendaDelphi\Exemplo12\frameMenu.dfm</Transaction>
+    <Transaction>2012/03/16 20:41:35.000.285,C:\Dev\AprendaDelphi\Exemplo12\Unit1.pas=C:\Dev\AprendaDelphi\Exemplo12\frameMenu.pas</Transaction>
+    <Transaction>2012/03/16 20:44:30.000.953,C:\Dev\AprendaDelphi\Exemplo12\Principal.pas=</Transaction>
+    <Transaction>2012/03/16 21:13:23.000.463,=C:\Dev\AprendaDelphi\Exemplo12\Principal.pas</Transaction>
+    <Transaction>2012/03/16 22:17:22.000.898,=C:\Dev\AprendaDelphi\Exemplo12\Unit1.pas</Transaction>
+    <Transaction>2012/03/16 22:17:32.000.081,C:\Dev\AprendaDelphi\Exemplo12\Unit1.pas=C:\Dev\AprendaDelphi\Exemplo12\FormFuncionarios.pas</Transaction>
+    <Transaction>2012/03/16 22:17:32.000.081,C:\Dev\AprendaDelphi\Exemplo12\Unit1.dfm=C:\Dev\AprendaDelphi\Exemplo12\FormFuncionarios.dfm</Transaction>
+    <Transaction>2012/03/16 22:17:37.000.980,=C:\Dev\AprendaDelphi\Exemplo12\Unit1.pas</Transaction>
+    <Transaction>2012/03/16 22:17:54.000.320,=C:\Dev\AprendaDelphi\Exemplo12\Unit1.pas</Transaction>
+    <Transaction>2012/03/16 22:18:02.000.689,C:\Dev\AprendaDelphi\Exemplo12\Unit1.pas=C:\Dev\AprendaDelphi\Exemplo12\FormPedidos.pas</Transaction>
+    <Transaction>2012/03/16 22:18:02.000.689,C:\Dev\AprendaDelphi\Exemplo12\Unit1.dfm=C:\Dev\AprendaDelphi\Exemplo12\FormPedidos.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

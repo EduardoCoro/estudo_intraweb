@@ -1,0 +1,2 @@
+inherited frmListaClientes: TfrmListaClientes
+end

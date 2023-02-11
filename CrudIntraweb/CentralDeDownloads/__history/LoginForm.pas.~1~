@@ -1,0 +1,73 @@
+unit LoginForm;
+
+interface
+
+uses
+  Classes, SysUtils, IWAppForm, IWApplication, IWColor, IWTypes, IWCompCheckbox,
+  IWCompGradButton, IWCompEdit, IWVCLBaseControl, IWBaseControl,
+  IWBaseHTMLControl, IWControl, IWCompLabel, Vcl.Controls, Vcl.Forms,
+  IWVCLBaseContainer, IWContainer, IWHTMLContainer, IWHTML40Container, IWRegion;
+
+type
+  TfrmLoginForm = class(TIWAppForm)
+    rgLogin: TIWRegion;
+    lblEmail: TIWLabel;
+    edtEmail: TIWEdit;
+    lblSenha: TIWLabel;
+    edtSenha: TIWEdit;
+    btnLogin: TIWGradButton;
+    cbxAdmin: TIWCheckBox;
+    procedure btnLoginClick(Sender: TObject);
+    procedure IWAppFormCreate(Sender: TObject);
+  public
+  end;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  ServerController,
+  AreaAdmin,
+  AreaCliente;
+
+procedure TfrmLoginForm.btnLoginClick(Sender: TObject);
+var
+  lLoginOK: Boolean;
+begin
+  lLoginOK := UserSession.ChecaLogin(edtEmail.Text, edtSenha.Text, cbxAdmin.Checked);
+  if lLoginOK then
+  begin
+    // destroi o form atual
+    Release;
+    //
+    if cbxAdmin.Checked then
+    begin
+      with TfrmAreaAdmin.Create(WebApplication) do begin
+        Show;
+      end;
+    end else
+    begin
+      with TfrmAreaCliente.Create(WebApplication) do begin
+        Show;
+      end;
+    end;
+  end;
+end;
+
+procedure TfrmLoginForm.IWAppFormCreate(Sender: TObject);
+begin
+  if WebApplication.RunParams.IndexOfName('mode') <> -1 then
+    if WebApplication.RunParams.Values['mode'] = 'admin' then
+    begin
+      edtEmail.Text := 'admin';
+      edtSenha.Text := 'admin';
+      cbxAdmin.Checked := True;
+    end;
+end;
+
+initialization
+
+  TfrmLoginForm.SetAsMainForm;
+
+end.
